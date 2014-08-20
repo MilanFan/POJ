@@ -1,7 +1,7 @@
 /*
  * 2790_Maze_DFS.cpp
  *
- * POJ 2790: Maze
+ * OpenJudge 2790: Maze
  * Depth First Search: Accepted
  *
  *  Created on: Aug 18, 2014
