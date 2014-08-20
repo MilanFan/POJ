@@ -1,7 +1,7 @@
 /*
  * 2790_Maze_BFS.cpp
  *
- * POJ 2790: Maze
+ * OpenJudge 2790: Maze
  * Breadth First Search: Memory Limit Exceeded
  *
  *  Created on: Aug 18, 2014
