@@ -1,8 +1,8 @@
 /*
- * 3377_BestCowLine_S1.cpp
+ * 3617_BestCowLine.cpp
  *
- * POJ 3377: Best Cow Line
- * Submit 1: Wrong Answer ...
+ * POJ 3617: Best Cow Line (OpenJudge 3377)
+ * To be noted: max # of chars per line to output is 80
  *
  *  Created on: Aug 19, 2014
  *      Author: Milan Fan
@@ -12,13 +12,12 @@
 
 using namespace std;
 
-const int MAX_N = 30000;
+const int MAX_N = 2000;
 
 int main()
 {
 	int N;
 	char cow[MAX_N];
-	char ans[MAX_N];
 
 	cin >> N;
 	for (int i = 0; i < N; i++) {
@@ -27,7 +26,7 @@ int main()
 
 	int head = 0;
 	int tail = N - 1;
-	for (int pos = 0; pos < N; pos++) {
+	for (int count = 1; count <= N; count++) {
 		int flag = 0;
 		int h = head;
 		int t = tail;
@@ -39,11 +38,11 @@ int main()
 			h++;
 			t--;
 		}
-		if (flag <= 0) ans[pos] = cow[head++];
-		else ans[pos] = cow[tail--];
+		if (flag <= 0) cout << cow[head++];
+		else cout << cow[tail--];
+		if (count % 80 == 0) cout << endl;
 	}
-
-	cout << ans << endl;
+	cout << endl;
 
 	return 0;
 }
